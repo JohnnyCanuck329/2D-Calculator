@@ -14,6 +14,8 @@ public class Calculator {
     /**
      * @param args the command line arguments
      */
+    public ShapeSelection data = new ShapeSelection();
+    
     public static void main(String[] args) {
         Calculator app = new Calculator ();
         
