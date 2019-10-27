@@ -41,10 +41,20 @@ public class ShapeSelection extends javax.swing.JFrame {
 
         jButton1.setText("Select Triangle");
         jButton1.setActionCommand("Select Triangle ");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Select Quadrilateral");
 
         jButton3.setText("Select Circle");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Circle");
@@ -112,6 +122,17 @@ public class ShapeSelection extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        new TriangleCalculator().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        CircleCalculator f1 = new CircleCalculator();
+        f1.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -140,11 +161,11 @@ public class ShapeSelection extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ShapeSelection().setVisible(true);
-            }
-        });
+        //java.awt.EventQueue.invokeLater(new Runnable() {
+            //public void run() {
+                //new ShapeSelection().setVisible(true);
+          //  }
+       // });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
