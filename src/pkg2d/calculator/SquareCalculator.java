@@ -169,21 +169,21 @@ public class SquareCalculator extends javax.swing.JFrame {
         num1=Float.parseFloat(jTextField1.getText());
         float num2;
         num2=Float.parseFloat(jTextField4.getText());
-        area(num1,num2);
-        perimeter(num1,num2);
+        jTextField2.setText(String.valueOf(area(num1,num2)));
+        jTextField3.setText(String.valueOf(perimeter(num1,num2)));
         
     }//GEN-LAST:event_jToggleButton1ActionPerformed
     
-    public static void area (float n1,float n2){
+    public static float area (float n1,float n2){
         float sAr;
         sAr=n1*n2;
-        System.out.println(sAr);
+        return sAr;
     }
     
-        public static void perimeter (float n1,float n2){
+        public static float perimeter (float n1,float n2){
         float sPer;
         sPer=(n1*2)+(n2*2);
-        System.out.println(sPer);
+        return sPer;
     }
     
     /**

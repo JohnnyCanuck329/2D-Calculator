@@ -160,18 +160,18 @@ public class CircleCalculator extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         float num1;
         num1=Float.parseFloat(jTextField1.getText());
-        perimeter (num1);
-        area (num1);
+        jTextField2.setText(String.valueOf(perimeter(num1)));
+        jTextField3.setText(String.valueOf(area(num1)));
     }//GEN-LAST:event_jButton2ActionPerformed
-    public static void perimeter (float n1){
+    public static float perimeter (float n1){
         float cPer;
         cPer=(float) (2*Math.PI*n1);
-        System.out.println(cPer);
+        return cPer;
     }
-    public static void area (float n1){
+    public static float area (float n1){
         float cAr;
         cAr=(float) (Math.PI*n1*n1);
-        System.out.println(cAr);
+        return cAr;
     }
     /**
      * @param args the command line arguments

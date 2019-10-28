@@ -155,8 +155,8 @@ public class TriangleCalculator extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,7 +171,7 @@ public class TriangleCalculator extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addGap(18, 18, 18)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -213,21 +213,20 @@ public class TriangleCalculator extends javax.swing.JFrame {
         num4=Float.parseFloat(jTextField4.getText());
         float num5;
         num5=Float.parseFloat(jTextField5.getText());
-        perimeter(num1,num2,num3);
-        area (num4,num5);
-        //jTextField6.setText(String.valueOf(per));
+        jTextField7.setText(String.valueOf(perimeter(num1,num2,num3)));
+        jTextField6.setText(String.valueOf(area(num4,num5)));
     }//GEN-LAST:event_jButton1ActionPerformed
     
-    public static void perimeter (float n1, float n2, float n3){
+    public static float perimeter (float n1, float n2, float n3){
         float pAn;
         pAn=n1+n2+n3;
-        System.out.println(pAn);
+        return pAn;
     }
     
-    public static void area (float n1, float n2){
+    public static float area (float n1, float n2){
         float aAn;
         aAn=(n1*n2)/2;
-        System.out.print(aAn);
+        return aAn;
     }
     
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

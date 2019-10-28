@@ -202,20 +202,20 @@ public class TrapezoidCal extends javax.swing.JFrame {
         num4=Float.parseFloat(jTextField6.getText());
         float num5;
         num5=Float.parseFloat(jTextField7.getText());
-        area (num1,num2,num3);
-        perimeter (num1,num2,num4,num5);
+        jTextField4.setText(String.valueOf(area (num1,num2,num3)));
+        jTextField5.setText(String.valueOf(perimeter (num1,num2,num4,num5)));
     }//GEN-LAST:event_jButton1ActionPerformed
     
-    public static void area (float n1,float n2, float n3){
+    public static float area (float n1,float n2, float n3){
         float tAr;
         tAr=(n1+n2)/2*n3;
-        System.out.println(tAr);
+        return tAr;
     }
     
-    public static void perimeter (float n1, float n2, float n3, float n4){
+    public static float perimeter (float n1, float n2, float n3, float n4){
         float tPer;
         tPer=n1+n2+n3+n4;
-        System.out.println(tPer);
+        return tPer;
     }
     
     /**
