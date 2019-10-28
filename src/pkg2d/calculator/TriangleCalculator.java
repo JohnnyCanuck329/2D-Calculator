@@ -214,12 +214,20 @@ public class TriangleCalculator extends javax.swing.JFrame {
         float num5;
         num5=Float.parseFloat(jTextField5.getText());
         perimeter(num1,num2,num3);
-        jTextField6.setText(String.valueOf(per));
+        area (num4,num5);
+        //jTextField6.setText(String.valueOf(per));
     }//GEN-LAST:event_jButton1ActionPerformed
     
     public static void perimeter (float n1, float n2, float n3){
         float pAn;
         pAn=n1+n2+n3;
+        System.out.println(pAn);
+    }
+    
+    public static void area (float n1, float n2){
+        float aAn;
+        aAn=(n1*n2)/2;
+        System.out.print(aAn);
     }
     
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
