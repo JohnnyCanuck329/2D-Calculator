@@ -156,7 +156,7 @@ public class SquareCalculator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        new QuadSelection().setVisible(true);
+        new ShapeSelection().setVisible(true);
         dispose();
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
@@ -165,26 +165,27 @@ public class SquareCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton3ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        float num1;
-        num1=Float.parseFloat(jTextField1.getText());
-        float num2;
-        num2=Float.parseFloat(jTextField4.getText());
-        area(num1,num2);
-        perimeter(num1,num2);
+        double num1;
+        num1=Double.parseDouble(jTextField1.getText());
+        double num2;
+        num2=Double.parseDouble(jTextField4.getText());
+        Shape rectangle = new Rectangle(num1,num2);
+        jTextField3.setText(String.valueOf(rectangle.getPerimeter()));
+        jTextField2.setText(String.valueOf(rectangle.getArea()));
         
     }//GEN-LAST:event_jToggleButton1ActionPerformed
     
-    public static void area (float n1,float n2){
-        float sAr;
-        sAr=n1*n2;
-        System.out.println(sAr);
-    }
+    //public static double area (double n1,double n2){
+        //double sAr;
+        //sAr=n1*n2;
+        //return sAr;
+   // }
     
-        public static void perimeter (float n1,float n2){
-        float sPer;
-        sPer=(n1*2)+(n2*2);
-        System.out.println(sPer);
-    }
+        //public static double perimeter (double n1,double n2){
+        //double sPer;
+        //sPer=(n1*2)+(n2*2);
+        //return sPer;
+    //}
     
     /**
      * @param args the command line arguments

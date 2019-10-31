@@ -5,6 +5,7 @@
  */
 package pkg2d.calculator;
 
+
 /**
  *
  * @author jon
@@ -158,21 +159,22 @@ public class CircleCalculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        float num1;
-        num1=Float.parseFloat(jTextField1.getText());
-        perimeter (num1);
-        area (num1);
+        double num1;
+        num1=Double.parseDouble(jTextField1.getText());
+        Shape circle = new Circle (num1);
+        jTextField2.setText(String.format("%.3f",circle.getPerimeter()));
+        jTextField3.setText(String.format("%.3f",circle.getArea()));
     }//GEN-LAST:event_jButton2ActionPerformed
-    public static void perimeter (float n1){
-        float cPer;
-        cPer=(float) (2*Math.PI*n1);
-        System.out.println(cPer);
-    }
-    public static void area (float n1){
-        float cAr;
-        cAr=(float) (Math.PI*n1*n1);
-        System.out.println(cAr);
-    }
+    //public static double perimeter (double n1){
+        //double cPer;
+        //cPer=(2*Math.PI*n1);
+        //return cPer;
+    //}
+    //public static double area (double n1){
+      //  double cAr;
+        //cAr=(Math.PI*n1*n1);
+        //return cAr;
+    //}
     /**
      * @param args the command line arguments
      */
